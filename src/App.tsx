@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -10,16 +11,26 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Link name="Olga" />
       </header>
     </div>
+  );
+}
+
+type LinkProps = {
+  name: string;
+};
+
+function Link({ name }: LinkProps) {
+  return (
+    <a
+      className="App-link"
+      href="https://reactjs.org"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Learn React {name} please
+    </a>
   );
 }
 
